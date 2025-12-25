@@ -20,7 +20,7 @@ const renderText = (text, className, baseWeight = 400) => {
 };
 
 const setupTextHover = (container, type) => {
-  if (!container) return;
+  if (!container) return () => {};
 
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
@@ -31,7 +31,6 @@ const setupTextHover = (container, type) => {
       ease: "power2.out",
       fontVariationSettings: `'wght' ${weight}`,
     });
-    // gsap.to(letter, { color: "red" });
   };
 
   const handelMouseMove = (e) => {
@@ -77,7 +76,7 @@ export const Welcome = () => {
       <p ref={subTitleRef}>
         {renderText(
           "Hey, I'm Himesh! Welcome to my",
-          "text-3xl' font-georama",
+          "text-3xl font-georama",
           100
         )}
       </p>
