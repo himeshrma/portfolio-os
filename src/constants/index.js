@@ -132,11 +132,11 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/himeshrma",
   },
   {
     id: 2,
-    text: "Platform",
+    text: "Behance",
     icon: "/icons/atom.svg",
     bg: "#4bcb63",
     link: "https://jsmastery.com/",
@@ -201,6 +201,26 @@ const gallery = [
   {
     id: 4,
     img: "/images/gal4.png",
+  },
+  {
+    id: 5,
+    img: "/images/gal5.png",
+  },
+  {
+    id: 6,
+    img: "/images/gal6.png",
+  },
+  {
+    id: 7,
+    img: "/images/gal7.png",
+  },
+  {
+    id: 8,
+    img: "/images/gal8.png",
+  },
+  {
+    id: 9,
+    img: "/images/gal9.png",
   },
 ];
 
@@ -397,26 +417,26 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/himi.jpeg",
     },
-    {
-      id: 2,
-      name: "casual-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
-    },
-    {
-      id: 3,
-      name: "conference-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
-    },
+    // {
+    //   id: 2,
+    //   name: "casual-me.png",
+    //   icon: "/images/image.png",
+    //   kind: "file",
+    //   fileType: "img",
+    //   position: "top-28 right-72",
+    //   imageUrl: "/images/adrian-2.jpg",
+    // },
+    // {
+    // id: 3,
+    // name: "conference-me.png",
+    // icon: "/images/image.png",
+    // kind: "file",
+    // fileType: "img",
+    // position: "top-52 left-80",
+    // imageUrl: "/images/adrian-3.jpeg",
+    // },
     {
       id: 4,
       name: "about-me.txt",
@@ -425,9 +445,9 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/himi.jpeg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+        "Hey! I’m Himesh 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
         "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",

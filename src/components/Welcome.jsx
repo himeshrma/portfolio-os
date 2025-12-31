@@ -1,15 +1,14 @@
-import { Video } from "#components";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
 
 const FONT_WEIGHTS = {
-  subtitle: { min: 200, max: 500, default: 200 },
+  subtitle: { min: 100, max: 400, default: 100 },
   title: { min: 400, max: 900, default: 400 },
 };
 
-const renderText = (text, className, baseWeight = 400) =>
-  [...text].map((char, i) => (
+const renderText = (text, className, baseWeight = 400) => {
+  return [...text].map((char, i) => (
     <span
       key={i}
       className={className}
@@ -18,6 +17,7 @@ const renderText = (text, className, baseWeight = 400) =>
       {char === " " ? "\u00A0" : char}
     </span>
   ));
+};
 
 const setupTextHover = (container, type) => {
   if (!container) return () => {};
@@ -25,14 +25,15 @@ const setupTextHover = (container, type) => {
   const letters = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
-  const animateLetter = (letter, weight, duration = 0.25) =>
-    gsap.to(letter, {
+  const animateLetter = (letter, weight, duration = 0.25) => {
+    return gsap.to(letter, {
       duration,
       ease: "power2.out",
       fontVariationSettings: `'wght' ${weight}`,
     });
+  };
 
-  const handleMouseMove = (e) => {
+  const handelMouseMove = (e) => {
     const { left } = container.getBoundingClientRect();
     const mouseX = e.clientX - left;
 
@@ -44,15 +45,15 @@ const setupTextHover = (container, type) => {
     });
   };
 
-  const handleMouseLeave = () =>
+  const handelMouseLeave = () =>
     letters.forEach((letter) => animateLetter(letter, base, 0.3));
 
-  container.addEventListener("mousemove", handleMouseMove);
-  container.addEventListener("mouseleave", handleMouseLeave);
+  container.addEventListener("mousemove", handelMouseMove);
+  container.addEventListener("mouseleave", handelMouseLeave);
 
   return () => {
-    container.removeEventListener("mousemove", handleMouseMove);
-    container.removeEventListener("mouseleave", handleMouseLeave);
+    container.removeEventListener("mousemove", handelMouseMove);
+    container.removeEventListener("mouseleave", handelMouseLeave);
   };
 };
 
@@ -72,25 +73,18 @@ export const Welcome = () => {
 
   return (
     <section id="welcome">
-      <p ref={subTitleRef} className="z-50 m-0 leading-[0.9]">
+      <p ref={subTitleRef}>
         {renderText(
-          "Hey, I'm Himesh! Welcome to my ",
-          "text-[5.6vh] font-georama",
-          200
+          "Hey, I'm Himesh! Welcome to my",
+          "text-3xl font-georama",
+          100
         )}
       </p>
-      {/* <div className="h-[5vw] w-[15vw] rounded-full overflow-hidden -mt-[1vw]">
-        <Video />
-      </div> */}
-      <h1 ref={titleRef} className="z-50 m-0 leading-none mt-[1vh]">
-        {renderText("portfolio", "text-[24vh] italic font-georama")}
+      <h1 ref={titleRef}>
+        {renderText("portfolio", "text-9xl  italic font-georama")}
       </h1>
 
-      <div className="h-screen w-screen fixed -z-10">
-        <Video />
-      </div>
-
-      <div className="small-screen z-50">
+      <div className="small-screen">
         <p>This Portfolio is designed for desktop/tablet screens only.</p>
       </div>
     </section>
