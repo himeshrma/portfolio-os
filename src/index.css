@@ -9,6 +9,7 @@ body {
   height: 100dvh;
   /* background-image: url("/images/111.jpg"); */
   background-image: url("/images/wallpaper.png");
+
   /* background-image: url("/images/222.png"); */
   /* background-image: url("/images/333.png"); */
   /* background-image: url("/images/555.png"); */
@@ -41,7 +42,7 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply fixed top-0 left-0 w-full flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none z-20;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -241,7 +242,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-2xl absolute top-10 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
@@ -270,17 +271,17 @@ body {
     }
 
     .gallery {
-      @apply p-5;
+      @apply p-2;
 
       ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
+        @apply grid grid-cols-3 grid-rows-3 gap-2.5;
 
         li {
           img {
-            @apply size-full object-cover rounded-lg;
+            @apply size-full object-contain rounded-lg;
           }
 
-          &:first-child {
+          /* &:first-child {
             @apply row-start-1 row-span-3 col-start-1 col-span-3;
           }
 
@@ -294,7 +295,7 @@ body {
 
           &:last-child {
             @apply row-start-4 row-span-2 col-start-1 col-span-2;
-          }
+          } */
         }
       }
     }
