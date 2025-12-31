@@ -11,6 +11,7 @@ import {
   Image,
   Contact,
   Photos,
+  Safari,
 } from "#windows";
 
 gsap.registerPlugin(Draggable);
@@ -31,6 +32,7 @@ const App = () => {
       <Contact />
       <Home />
       <Photos />
+      <Safari />
     </main>
   );
 };
