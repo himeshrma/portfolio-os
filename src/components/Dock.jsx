@@ -5,9 +5,12 @@ import { Tooltip } from "react-tooltip";
 import { dockApps } from "#constants";
 import { useGSAP } from "@gsap/react";
 import useWindowStore from "#store/window.js";
+import useLocationStore from "#store/location";
+import { locations } from "#constants";
 
 const Dock = () => {
   const { openWindow, closeWindow, windows } = useWindowStore();
+  const { setActiveLocation } = useLocationStore();
 
   const docRef = useRef(null);
 
@@ -62,7 +65,20 @@ const Dock = () => {
   }, []);
 
   const toggleApp = (app) => {
-    //Implement open-window logic
+    //Implement open-window logic for trash in dock itsefl because it's not separate window its part of finder window .
+    if (app.id === "trash") {
+      const finderWindow = windows["finder"];
+
+      if (finderWindow?.isOpen) {
+        closeWindow("finder");
+      } else {
+        setActiveLocation(locations.trash);
+        openWindow("finder");
+      }
+
+      return;
+    }
+
     if (!app.canOpen) return () => {};
 
     const window = windows[app.id];
