@@ -74,55 +74,36 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
-  {
-    id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
-  },
-  {
-    id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-  },
-  {
-    id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
-  },
-];
+const blogPosts = [];
 
 const techStack = [
   {
+    category: "Languages",
+    items: ["C++", "JavaScript", "SQL"],
+  },
+  {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
-  },
-  {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["React.js", "GSAP", "Tailwind CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express.js", "REST APIs"],
+  },
+  {
+    category: "Web3",
+    items: ["Solidity", "Web3.js", "Ethers.js", "Hardhat", "Foundry"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB", "MySQL"],
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub", "Postman", "VS Code"],
+  },
+  {
+    category: "Design & UI",
+    items: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
   },
 ];
 
@@ -131,29 +112,29 @@ const socials = [
     id: 1,
     text: "Github",
     icon: "/icons/github.svg",
-    bg: "#f4656b",
+    bg: "#010336",
     link: "https://github.com/himeshrma",
   },
   {
     id: 2,
     text: "Behance",
     icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    bg: "#003ECB",
+    link: "https://www.behance.net/5767bd71",
   },
   {
     id: 3,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    bg: "#000000",
+    link: "https://x.com/himeshrma",
   },
   {
     id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    bg: "#0A66C2",
+    link: "http://linkedin.com/in/himesh-sharma-50a20126a",
   },
 ];
 
@@ -245,38 +226,38 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "Subscription Detection system",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      windowPosition: "top-[5vh] left-1", // optional: Finder window position
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "Subscripion API.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "The Subscription Detection system is a backend-focused application designed to manage and monitor recurring subscriptions through automated workflows.",
+            "It eliminates manual tracking by detecting subscription expirations, handling renewal logic, and updating subscription states programmatically.",
+            "The system is built around secure REST APIs with authentication, structured data models, and background jobs for time-based subscription checks.",
+            "It emphasizes production-ready backend practices such as clean architecture, centralized error handling, and reliable business logic execution.",
           ],
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "Github.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "https://github.com/himeshrma/subscription-detection-api",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "view.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -285,7 +266,7 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "Live.view",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
@@ -295,89 +276,143 @@ const WORK_LOCATION = {
       ],
     },
 
+    // // ▶ Project 2
+    // {
+    //   id: 6,
+    //   name: "AI Resume Analyzer",
+    //   icon: "/images/folder.png",
+    //   kind: "folder",
+    //   position: "top-52 right-80",
+    //   windowPosition: "top-[20vh] left-7",
+    //   children: [
+    //     {
+    //       id: 1,
+    //       name: "AI Resume Analyzer Project.txt",
+    //       icon: "/images/txt.png",
+    //       kind: "file",
+    //       fileType: "txt",
+    //       position: "top-5 right-10",
+    //       description: [
+    //         "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
+    //         "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
+    //         "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
+    //         "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+    //       ],
+    //     },
+    //     {
+    //       id: 2,
+    //       name: "ai-resume-analyzer.com",
+    //       icon: "/images/safari.png",
+    //       kind: "file",
+    //       fileType: "url",
+    //       href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+    //       position: "top-20 left-20",
+    //     },
+    //     {
+    //       id: 4,
+    //       name: "ai-resume-analyzer.png",
+    //       icon: "/images/image.png",
+    //       kind: "file",
+    //       fileType: "img",
+    //       position: "top-52 left-80",
+    //       imageUrl: "/images/project-2.png",
+    //     },
+    //     {
+    //       id: 5,
+    //       name: "Design.fig",
+    //       icon: "/images/plain.png",
+    //       kind: "file",
+    //       fileType: "fig",
+    //       href: "https://google.com",
+    //       position: "top-60 left-5",
+    //     },
+    //   ],
+    // },
+
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "Portfolio Webpapp",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-[20vh] left-5",
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "Portfolio.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
-          position: "top-5 right-10",
+          position: "top-5 right-60",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "The Portfolio Website is a frontend application built with a strong focus on application logic and state management rather than visual presentation.",
+            "It implements a centralized global state to manage window behavior such as opening, closing, minimizing, and focus handling across multiple components.",
+            "Instead of isolated UI states, the project models window interactions as shared application state, ensuring predictable behavior and scalability.",
+            "The system is structured to simulate real desktop-like workflows, emphasizing clean state transitions, component communication, and maintainable logic design.",
           ],
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "Github.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-          position: "top-20 left-20",
+          href: "https://github.com/himeshrma/portfolio-os",
+          position: "top-52 left-0",
         },
+
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "Portfolio.png",
           icon: "/images/image.png",
           kind: "file",
-          fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
+          fileType: "url",
+          position: "top-10 left-0",
+          href: "https://www.figma.com/design/NOM4uAPkj5BA0CSMnjYrx8/Untitled?node-id=1-5000&t=OUOaWKFHE0zRIXS7-1",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        //   position: "top-60 left-5",
+        // },
       ],
     },
 
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Food Reel",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-[33vh] left-12",
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "Food Reel App Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "The Food Reel application is a full-stack system designed to support short-form food video content similar to an Instagram-style content feed.",
+            "The backend is built around a clear domain model with separate schemas for users and content creators, where creators represent restaurants uploading food-related video content.",
+            "It implements structured APIs to handle content creation, access control, and data flow between creators and consumers in a scalable manner.",
+            "A minimal mobile-first frontend is integrated to consume backend APIs, with the primary focus placed on backend architecture, data modeling, and business logic.",
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "Github.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          href: "https://github.com/himeshrma/Food-reel-app",
           position: "top-10 right-20",
         },
         {
@@ -447,10 +482,11 @@ const ABOUT_LOCATION = {
       subtitle: "Meet the Developer Behind the Code",
       image: "/images/himi.jpeg",
       description: [
-        "Hey! I’m Himesh 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Hi, I’m Himesh, a software developer focused on building reliable, scalable, and well-structured web applications,",
+        "I work primarily with JavaScript, React, Next.js, Node.js, and modern web tooling to develop end-to-end features,",
+        "I enjoy solving real-world problems through clean logic, strong fundamentals, and maintainable code,",
+        "I prioritize performance, code readability, and system reliability while writing production-grade applications,",
+        "Currently focused on strengthening DSA, core CS fundamentals, and building impactful projects in preparation for SDE roles",
       ],
     },
   ],
